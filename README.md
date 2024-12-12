@@ -52,4 +52,5 @@ module "folders" {
 }
 
 ```
-
+## Examples
+This folder [Folder Structure examples](/examples/) has a few examples that you can use to get started
