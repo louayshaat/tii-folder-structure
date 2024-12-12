@@ -55,6 +55,6 @@ module "folders" {
 ## Examples
 This folder [Folder Structure examples](/examples/) has a few examples that you can use to get started
 
-Folder structure is defined [here](/examples/main.tf)
-Security and Org Policies are defined [here](/examples/security.tf)
-Org variables are defined [here](/examples/org.tfvars.example)
+- Folder structure is defined [here](/examples/main.tf)
+- Security and Org Policies are defined [here](/examples/security.tf)
+- Org variables are defined [here](/examples/org.tfvars.example)
