@@ -23,20 +23,6 @@ data "google_organization" "org" {
   organization = "${var.org_id}"
 }
 
-
-# Create Organization Owner GSuite Group to associate with the Organization
-resource "gsuite_group" "owner" {
-  email       = "org-${var.org_id}-owners@${data.google_organization.org.domain}"
-  name        = "${replace(data.google_organization.org.domain, ".", "-")}-owners"
-  description = "Project Owners"
-}
-
-resource "google_organization_iam_member" "org_project_owner" {
-  org_id = "${var.org_id}"
-  role   = "roles/owner"
-  member = "group:${gsuite_group.owner.email}"
-}
-
 # Top-level Folders
 resource "google_folder" "sandpit" {
   display_name = "sandpit"
